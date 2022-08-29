@@ -45,7 +45,6 @@ public class MantenimientoService implements  MantenimientoServiceI {
                    mantenimiento.setFecha(LocalDate.now());
                    mantenimiento.setDocumento(mantenimientoRequest.getMantenimientos().getDocumento());
                    mantenimiento.setTipoDocumento(mantenimientoRequest.getMantenimientos().getTipoDocumento());
-                   // mantenimiento.setMecanicos(mecanico);
                    mantenimientosRespository.save(mantenimiento);
                    mensaje ="se agrego el manetenimiento";
                    status = appParametersYesOK;

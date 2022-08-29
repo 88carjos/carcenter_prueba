@@ -1,7 +1,5 @@
 package car.center_prueba.carcenter_prueba.service;
 
-import car.center_prueba.carcenter_prueba.model.MantenimientoRequest;
-import car.center_prueba.carcenter_prueba.model.Mantenimientos;
 import car.center_prueba.carcenter_prueba.model.MecanicoRequest;
 import org.springframework.stereotype.Component;
 
@@ -132,8 +130,6 @@ public class ValidarRequest {
         mensaje = mensaje != null ? mensaje+"-" +validarNombres(mecanicoRequest.getMecanicos().getSegundoApellido(),"SEGUNDO_APELLIDO"):
                                                     validarNombres(mecanicoRequest.getMecanicos().getSegundoApellido(),"SEGUNDO_APELLIDO");
 
-      // mensaje = mensaje != null ? mensaje+"-" +validarCelular(mecanicoRequest.getMecanicos().getCelular()):
-        //                                            validarCelular(mecanicoRequest.getMecanicos().getCelular());
 
         mensaje = mensaje != null ? mensaje+"-" +validarEmail(mecanicoRequest.getMecanicos().getEmail()):
                                                     validarEmail(mecanicoRequest.getMecanicos().getEmail());

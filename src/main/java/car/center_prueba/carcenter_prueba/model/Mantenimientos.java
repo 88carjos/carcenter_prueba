@@ -32,12 +32,5 @@ public class Mantenimientos implements Serializable {
     private String tipoDocumento;
 
 
-   /* @ManyToOne
-    @JoinColumns({
-            @JoinColumn(name="documento", referencedColumnName = "documento"),
-            @JoinColumn(name="tipo_documento", referencedColumnName = "tipo_documento")
-
-    })
-    private Mecanicos mecanicos;*/
 
 }
