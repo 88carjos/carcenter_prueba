@@ -1,5 +1,7 @@
 package car.center_prueba.carcenter_prueba.service;
 
+import car.center_prueba.carcenter_prueba.model.MantenimientoRequest;
+import car.center_prueba.carcenter_prueba.model.Mantenimientos;
 import car.center_prueba.carcenter_prueba.model.MecanicoRequest;
 import org.springframework.stereotype.Component;
 
@@ -29,7 +31,7 @@ public class ValidarRequest {
         String regex = "^[A-Za-z]\\w{3,29}$";
         String mensaje=null;
         Pattern pattern = Pattern.compile(regex);
-        if (nombre == null) {
+        if (nombre == "") {
             if(parte.equals("PRIMER_NOMBRE") || parte.equals("PRIMER_APELLIDO")){
                 return "el dato de primer nombre o apellido no puede ser vacio";
             }else{
@@ -110,7 +112,7 @@ public class ValidarRequest {
 
     }
 
-    public String verificarRequest(MecanicoRequest mecanicoRequest){
+    public String verificarRequestMecanicos(MecanicoRequest mecanicoRequest){
 
         String mensaje = null;
         mensaje = validarTipoDoc(mecanicoRequest.getMecanicos().getTipoDocumento());
@@ -145,6 +147,8 @@ public class ValidarRequest {
 
         return  mensaje;
     }
+
+
 
     public  String capitalize(String str){
         if(str == null) return str;

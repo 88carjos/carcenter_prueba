@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class MecanicoResponse  extends Response{
+public class MantenimientoResponse extends Response {
 
-    List<Mecanicos> mecanicos;
+    List<Mantenimientos> mantenimientos;
 }

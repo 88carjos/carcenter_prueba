@@ -2,6 +2,7 @@ package car.center_prueba.carcenter_prueba.model;
 
 import lombok.Data;
 
+import javax.persistence.Entity;
 import java.io.Serializable;
 
 @Data
